@@ -1,7 +1,7 @@
 class apb_item extends uvm_sequence_item;
 
   rand bit [31:0] PADDR;
-   bit        PSEL;
+  bit             PSEL;
   rand bit        PENABLE;
   rand bit        PWRITE;
   rand bit [31:0] PWDATA;

@@ -1,6 +1,6 @@
 UVM_VERBOSITY = UVM_MEDIUM
 UVM_TESTNAME = apb_test
-UVM_VERISON = uvm-1.2
+UVM_VERSION = uvm-1.2
 
 RUN_OPT = +UVM_TESTNAME=$(UVM_TESTNAME) +UVM_VERBOSITY=$(UVM_VERBOSITY)
 
@@ -15,9 +15,11 @@ VCS_INCDIR = +incdir+../src/common \
 						 +incdir+../src/slave 
 
 VCS_OPTS = -full64 -sverilog -debug_access+all -kdb -lca \
-						-ntb_opts uvm-1.2 -timescale=1ns/1ps 
+						-ntb_opts $(UVM_VERSION) -timescale=1ns/1ps 
 
 SIMV_OPTS = -l simv.log $(RUN_OPT) 
+
+all : clean compile sim
 						
 compile:
 	vcs $(VCS_OPTS) $(VCS_INCDIR) $(VCS_SRC_FILES) -l compile.log -o simv 

@@ -13,12 +13,12 @@ class apb_master_agent extends uvm_agent;
 		super.build_phase(phase);
 		drv = apb_master_driver::type_id::create("drv", this);
 		mon = apb_master_monitor::type_id::create("mon", this);
-		sqr = uvm_sequencer#(apb_item)::type_id:create("sqr", this);
+		sqr = uvm_sequencer#(apb_item)::type_id::create("sqr", this);
 	endfunction
 
 	function void connect_phase(uvm_phase phase);
 		super.connect_phase(phase);
-		driver.seq_item_port.connect(sqr.seq_item_export);
+		drv.seq_item_port.connect(sqr.seq_item_export);
 	endfunction
 
 endclass

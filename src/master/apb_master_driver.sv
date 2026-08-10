@@ -4,7 +4,7 @@ class apb_master_driver extends uvm_driver #(apb_item);
 	virtual apb_master_if vif;
 	
 	function new(string name, uvm_component parent);
-		super.new(name, parent)
+		super.new(name, parent);
 	endfunction 
 	
 	function void build_phase(uvm_phase phase);
@@ -17,6 +17,7 @@ class apb_master_driver extends uvm_driver #(apb_item);
 		forever begin
 			seq_item_port.get_next_item(tr);
 			// drive signal
+			vif.paddr = tr.PADDR;
 			seq_item_port.item_done();
 		end
 	endtask

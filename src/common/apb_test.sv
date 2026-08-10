@@ -16,4 +16,10 @@ class apb_base_test extends uvm_test;
 		uvm_top.print_topology();
 	endfunction 
 
+	task run_phase(uvm_phase phase);
+		phase.raise_objection(this);
+		
+		phase.drop_objection(this);
+	endtask	
+
 endclass

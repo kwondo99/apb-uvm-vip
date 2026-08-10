@@ -30,5 +30,5 @@ sim :
 	@echo "simulation.."
 
 clean : 
-	rm -rf simv* csrc *.log *.key *.h *.vdb *.conf *.rc *.fsdb 
+	rm -rf simv* csrc *.log *.key *.h *.vdb *.conf *.rc *.fsdb verdiLog 
 	@echo "clear.."

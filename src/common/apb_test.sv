@@ -17,8 +17,11 @@ class apb_base_test extends uvm_test;
 	endfunction 
 
 	task run_phase(uvm_phase phase);
+		apb_master_sequence seq;
 		phase.raise_objection(this);
-		
+		seq = apb_master_sequence::type_id::create("seq");
+		seq.start(env.master_agt.sqr);
+				
 		phase.drop_objection(this);
 	endtask	
 

@@ -15,6 +15,7 @@ class apb_master_driver extends uvm_driver #(apb_item);
 	task run_phase(uvm_phase phase);
 		apb_item tr;
 		forever begin
+			@(posedge vif.pclk);
 			seq_item_port.get_next_item(tr);
 			// drive signal
 			vif.paddr = tr.PADDR;

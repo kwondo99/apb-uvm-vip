@@ -8,7 +8,9 @@ class apb_master_sequence extends uvm_sequence#(apb_item);
 	virtual task body();
 		apb_item tr;
 		repeat(2) begin
+			tr = apb_item::type_id::create("tr");
 			`uvm_do(tr)
+			`uvm_info("M_SEQ", "make seq", UVM_MEDIUM)
 		end
 	endtask 
 

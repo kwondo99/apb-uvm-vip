@@ -1,3 +1,0 @@
-Command Line: /tools/synopsys/verdi/X-2025.06-1/platform/LINUXAMD64/bin/Novas -ssf apb_test.fsdb
-uname(Linux kccipangyo1 4.18.0-553.83.1.el8_10.x86_64 #1 SMP Fri Oct 31 03:39:01 EDT 2025 x86_64)
-KdbImportParallelMixAllLib time 0.033010 0.034700 0.006968 delta 24387584 24387584 total 1267724288 1267724288

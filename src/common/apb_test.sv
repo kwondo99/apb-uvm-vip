@@ -17,11 +17,15 @@ class apb_base_test extends uvm_test;
 	endfunction 
 
 	task run_phase(uvm_phase phase);
-		apb_master_sequence seq;
+		apb_master_sequence m_seq;
+		apb_slave_sequence s_seq;
 		phase.raise_objection(this);
-		seq = apb_master_sequence::type_id::create("seq");
-		seq.start(env.master_agt.sqr);
-				
+		m_seq = apb_master_sequence::type_id::create("m_seq");
+		s_seq = apb_slave_sequence::type_id::create("s_seq");
+		fork
+		m_seq.start(env.master_agt.sqr);
+		s_seq.start(env.slave_agt.sqr);	
+		join_any
 		phase.drop_objection(this);
 	endtask	
 

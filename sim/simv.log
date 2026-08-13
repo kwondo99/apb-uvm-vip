@@ -1,0 +1,165 @@
+Command: /home/pedu02/dongo_work/project/20260731_apb_vip/sim/./simv -l simv.log +UVM_TESTNAME=apb_base_test +UVM_VERBOSITY=UVM_MEDIUM
+Chronologic VCS simulator copyright 1991-2024
+Contains Synopsys proprietary information.
+Compiler version W-2024.09-SP2_Full64; Runtime version W-2024.09-SP2_Full64;  Aug 13 21:56 2026
+UVM_INFO /tools/synopsys/vcs/W-2024.09-SP2/etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+*Verdi* Loading libsscore_vcs202409.so
+FSDB Dumper for VCS, Release Verdi_X-2025.06-1, Linux x86_64/64bit, 07/19/2025
+(C) 1996 - 2025 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'apb_test.fsdb'
+*Verdi* : Begin traversing the scope (apb_tb_top), layer (0).
+*Verdi* : End of traversing.
+UVM_INFO @ 0: reporter [RNTST] Running test apb_base_test...
+UVM_INFO /tools/synopsys/vcs/W-2024.09-SP2/etc/uvm-1.2/base/uvm_root.svh(589) @ 0: reporter [UVMTOP] UVM testbench topology:
+--------------------------------------------------------------
+Name                       Type                    Size  Value
+--------------------------------------------------------------
+uvm_test_top               apb_base_test           -     @347 
+  env                      apb_env                 -     @360 
+    COMP_374               apb_master_agent        -     @369 
+      COMP_422             apb_master_monitor      -     @417 
+      drv                  apb_master_driver       -     @388 
+        rsp_port           uvm_analysis_port       -     @407 
+        seq_item_port      uvm_seq_item_pull_port  -     @397 
+      sqr                  uvm_sequencer           -     @426 
+        rsp_export         uvm_analysis_export     -     @435 
+        seq_item_export    uvm_seq_item_pull_imp   -     @553 
+        arbitration_queue  array                   0     -    
+        lock_queue         array                   0     -    
+        num_last_reqs      integral                32    'd1  
+        num_last_rsps      integral                32    'd1  
+    COMP_383               apb_slave_agent         -     @378 
+      COMP_576             apb_slave_driver        -     @571 
+        rsp_port           uvm_analysis_port       -     @590 
+        seq_item_port      uvm_seq_item_pull_port  -     @580 
+      COMP_605             apb_slave_monitor       -     @600 
+      sqr                  uvm_sequencer           -     @609 
+        rsp_export         uvm_analysis_export     -     @618 
+        seq_item_export    uvm_seq_item_pull_imp   -     @736 
+        arbitration_queue  array                   0     -    
+        lock_queue         array                   0     -    
+        num_last_reqs      integral                32    'd1  
+        num_last_rsps      integral                32    'd1  
+--------------------------------------------------------------
+
+UVM_INFO ../src/slave/apb_slave_driver.sv(37) @ 5000: uvm_test_top.env.COMP_383.COMP_576 [S_DRV] delay =          0
+UVM_INFO ../src/master/apb_master_driver.sv(64) @ 5000: uvm_test_top.env.COMP_374.drv [M_DRV] paddr = fad26f7e, psel = 1, pwrite = 0, pwdata= f4278f8f
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 15000: uvm_test_top.env.COMP_383.sqr@@ [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 15000: uvm_test_top.env.COMP_374.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(64) @ 15000: uvm_test_top.env.COMP_374.drv [M_DRV] paddr = e5b4dae5, psel = 1, pwrite = 1, pwdata= 3109c546
+UVM_INFO ../src/slave/apb_slave_driver.sv(37) @ 35000: uvm_test_top.env.COMP_383.COMP_576 [S_DRV] delay =          4
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 85000: uvm_test_top.env.COMP_383.sqr@@ [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 85000: uvm_test_top.env.COMP_374.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(64) @ 85000: uvm_test_top.env.COMP_374.drv [M_DRV] paddr = 59cb566a, psel = 0, pwrite = 1, pwdata= c4f5da1f
+UVM_INFO ../src/slave/apb_slave_driver.sv(37) @ 105000: uvm_test_top.env.COMP_383.COMP_576 [S_DRV] delay =          0
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 115000: uvm_test_top.env.COMP_383.sqr@@ [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 115000: uvm_test_top.env.COMP_374.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(64) @ 115000: uvm_test_top.env.COMP_374.drv [M_DRV] paddr = 8cd09f14, psel = 0, pwrite = 1, pwdata= f6184374
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 125000: uvm_test_top.env.COMP_374.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(64) @ 125000: uvm_test_top.env.COMP_374.drv [M_DRV] paddr = 8a87d33d, psel = 0, pwrite = 1, pwdata= da578f0a
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 135000: uvm_test_top.env.COMP_374.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(64) @ 135000: uvm_test_top.env.COMP_374.drv [M_DRV] paddr = 2441a89c, psel = 0, pwrite = 1, pwdata= af5d9ad3
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 175000: uvm_test_top.env.COMP_374.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(64) @ 175000: uvm_test_top.env.COMP_374.drv [M_DRV] paddr = b7ace411, psel = 1, pwrite = 0, pwdata= 3a0ff1c1
+UVM_INFO ../src/slave/apb_slave_driver.sv(37) @ 195000: uvm_test_top.env.COMP_383.COMP_576 [S_DRV] delay =          4
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 245000: uvm_test_top.env.COMP_383.sqr@@ [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 245000: uvm_test_top.env.COMP_374.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(64) @ 245000: uvm_test_top.env.COMP_374.drv [M_DRV] paddr = 165b45bd, psel = 1, pwrite = 1, pwdata= 1a14d4ca
+UVM_INFO ../src/slave/apb_slave_driver.sv(37) @ 265000: uvm_test_top.env.COMP_383.COMP_576 [S_DRV] delay =          1
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 285000: uvm_test_top.env.COMP_383.sqr@@ [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 285000: uvm_test_top.env.COMP_374.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(64) @ 285000: uvm_test_top.env.COMP_374.drv [M_DRV] paddr = 638ad358, psel = 0, pwrite = 0, pwdata= 19bc982a
+UVM_INFO ../src/slave/apb_slave_driver.sv(37) @ 305000: uvm_test_top.env.COMP_383.COMP_576 [S_DRV] delay =          4
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 325000: uvm_test_top.env.COMP_374.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(64) @ 325000: uvm_test_top.env.COMP_374.drv [M_DRV] paddr = be45b7d0, psel = 1, pwrite = 1, pwdata= 236d4471
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 355000: uvm_test_top.env.COMP_383.sqr@@ [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 355000: uvm_test_top.env.COMP_374.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(64) @ 355000: uvm_test_top.env.COMP_374.drv [M_DRV] paddr = 1e88ba7b, psel = 0, pwrite = 0, pwdata= 8f850184
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 365000: uvm_test_top.env.COMP_374.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(64) @ 365000: uvm_test_top.env.COMP_374.drv [M_DRV] paddr = b7e3c7c7, psel = 0, pwrite = 0, pwdata= bb53eb3c
+UVM_INFO ../src/slave/apb_slave_driver.sv(37) @ 385000: uvm_test_top.env.COMP_383.COMP_576 [S_DRV] delay =          3
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 415000: uvm_test_top.env.COMP_374.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(64) @ 415000: uvm_test_top.env.COMP_374.drv [M_DRV] paddr = 2c1a5509, psel = 1, pwrite = 1, pwdata= 90b5d815
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 425000: uvm_test_top.env.COMP_383.sqr@@ [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 425000: uvm_test_top.env.COMP_374.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(64) @ 425000: uvm_test_top.env.COMP_374.drv [M_DRV] paddr = ad85d174, psel = 1, pwrite = 1, pwdata= ae671480
+UVM_INFO ../src/slave/apb_slave_driver.sv(37) @ 445000: uvm_test_top.env.COMP_383.COMP_576 [S_DRV] delay =          1
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 465000: uvm_test_top.env.COMP_383.sqr@@ [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 465000: uvm_test_top.env.COMP_374.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(64) @ 465000: uvm_test_top.env.COMP_374.drv [M_DRV] paddr = 65fa7635, psel = 1, pwrite = 1, pwdata= 55dd5aab
+UVM_INFO ../src/slave/apb_slave_driver.sv(37) @ 485000: uvm_test_top.env.COMP_383.COMP_576 [S_DRV] delay =          3
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 525000: uvm_test_top.env.COMP_383.sqr@@ [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 525000: uvm_test_top.env.COMP_374.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(64) @ 525000: uvm_test_top.env.COMP_374.drv [M_DRV] paddr = 569c0a9f, psel = 0, pwrite = 0, pwdata= c230ddce
+UVM_INFO ../src/slave/apb_slave_driver.sv(37) @ 545000: uvm_test_top.env.COMP_383.COMP_576 [S_DRV] delay =          1
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 545000: uvm_test_top.env.COMP_374.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(64) @ 545000: uvm_test_top.env.COMP_374.drv [M_DRV] paddr = cdddeb55, psel = 0, pwrite = 1, pwdata= ee50711f
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 565000: uvm_test_top.env.COMP_383.sqr@@ [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 575000: uvm_test_top.env.COMP_374.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(64) @ 575000: uvm_test_top.env.COMP_374.drv [M_DRV] paddr = e7d2f600, psel = 1, pwrite = 1, pwdata= 3d1ffd2d
+UVM_INFO ../src/slave/apb_slave_driver.sv(37) @ 595000: uvm_test_top.env.COMP_383.COMP_576 [S_DRV] delay =          0
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 605000: uvm_test_top.env.COMP_383.sqr@@ [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 605000: uvm_test_top.env.COMP_374.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(64) @ 605000: uvm_test_top.env.COMP_374.drv [M_DRV] paddr = 78c379ea, psel = 0, pwrite = 0, pwdata= 877c7f0f
+UVM_INFO ../src/slave/apb_slave_driver.sv(37) @ 625000: uvm_test_top.env.COMP_383.COMP_576 [S_DRV] delay =          4
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 645000: uvm_test_top.env.COMP_374.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(64) @ 645000: uvm_test_top.env.COMP_374.drv [M_DRV] paddr = db5bc302, psel = 0, pwrite = 1, pwdata= b775c8bf
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 655000: uvm_test_top.env.COMP_374.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO /tools/synopsys/vcs/W-2024.09-SP2/etc/uvm-1.2/base/uvm_objection.svh(1276) @ 655000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO /tools/synopsys/vcs/W-2024.09-SP2/etc/uvm-1.2/base/uvm_report_catcher.svh(705) @ 655000: reporter [UVM/REPORT/CATCHER] 
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+UVM_INFO /tools/synopsys/vcs/W-2024.09-SP2/etc/uvm-1.2/base/uvm_report_server.svh(904) @ 655000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   68
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[M_DRV]    20
+[M_SEQ]    20
+[RNTST]     1
+[S_DRV]    12
+[S_SEQ]    11
+[TEST_DONE]     1
+[UVM/RELNOTES]     1
+[UVM/REPORT/CATCHER]     1
+[UVMTOP]     1
+
+$finish called from file "/tools/synopsys/vcs/W-2024.09-SP2/etc/uvm-1.2/base/uvm_root.svh", line 527.
+$finish at simulation time               655000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 655000 ps
+CPU Time:      0.190 seconds;       Data structure size:   0.6Mb
+Thu Aug 13 21:56:12 2026

@@ -1,16 +1,17 @@
 class apb_item extends uvm_sequence_item;
 
-  rand bit [31:0] PADDR;
-  bit             PSEL;
-  bit             PENABLE;
-  rand bit        PWRITE;
-  rand bit [31:0] PWDATA;
-  rand bit [31:0] PRDATA;
-  bit             PREADY;
-  rand bit [ 3:0] PSTRB;
-  rand bit        PSLVERR;
-	rand int 				PREADY_DELAY;
+  rand bit          [31:0] PADDR;
+  rand bit                 PSEL;
+  bit                      PENABLE;
+  rand bit                 PWRITE;
+  rand bit          [31:0] PWDATA;
+  rand bit          [31:0] PRDATA;
+  bit                      PREADY;
+  rand bit          [ 3:0] PSTRB;
+  rand bit                 PSLVERR;
+  rand int unsigned        PREADY_DELAY;
 
+  constraint delay_length {PREADY_DELAY < 5;}
 
   `uvm_object_utils_begin(apb_item)
     `uvm_field_int(PADDR, UVM_DEFAULT)

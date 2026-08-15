@@ -14,12 +14,12 @@ class apb_master_driver extends uvm_driver #(apb_item);
 
   // if tr.PWRTIE = 1'b1
   task write_drive(apb_item tr);
-    vif.cb.psel   <= tr.PSEL;
-    vif.cb.paddr  <= tr.PADDR;
+    vif.cb.psel <= tr.PSEL;
+    vif.cb.paddr <= tr.PADDR;
     vif.cb.pwrite <= tr.PWRITE;
     vif.cb.pwdata <= tr.PWDATA;
-    vif.cb.pstrb  <= tr.PSTRB;
-		vif.cb.penable <= 1'b0;
+    vif.cb.pstrb <= tr.PSTRB;
+    vif.cb.penable <= 1'b0;
     if (tr.PSEL) begin
       @(vif.cb);
       vif.cb.penable <= 1'b1;
@@ -27,7 +27,7 @@ class apb_master_driver extends uvm_driver #(apb_item);
         @(vif.cb);
       end
     end else begin
-			@(vif.cb);
+      @(vif.cb);
       vif.cb.penable <= 1'b1;
       repeat (tr.PREADY_DELAY) @(vif.cb);
       vif.cb.penable <= 1'b0;
@@ -36,11 +36,11 @@ class apb_master_driver extends uvm_driver #(apb_item);
 
   // if tr.PWRITE = 1'b0
   task read_drive(apb_item tr);
-    vif.cb.psel   <= tr.PSEL;
-    vif.cb.paddr  <= tr.PADDR;
+    vif.cb.psel <= tr.PSEL;
+    vif.cb.paddr <= tr.PADDR;
     vif.cb.pwrite <= tr.PWRITE;
-    vif.cb.pstrb  <= tr.PSTRB;
-		vif.cb.penable <= 1'b0;
+    vif.cb.pstrb <= tr.PSTRB;
+    vif.cb.penable <= 1'b0;
     if (tr.PSEL) begin
       @(vif.cb);
       vif.cb.penable <= 1'b1;
@@ -48,7 +48,7 @@ class apb_master_driver extends uvm_driver #(apb_item);
         @(vif.cb);
       end
     end else begin
-			@(vif.cb);
+      @(vif.cb);
       vif.cb.penable <= 1'b1;
       repeat (tr.PREADY_DELAY) @(vif.cb);
     end
@@ -56,8 +56,13 @@ class apb_master_driver extends uvm_driver #(apb_item);
 
   task run_phase(uvm_phase phase);
     apb_item tr;
+    vif.cb.paddr <= 0;
+    vif.cb.pwrite <= 0;
+		vif.cb.pwdata <= 0;
     vif.cb.psel <= 0;
     vif.cb.penable <= 0;
+    vif.cb.pstrb <= 0;
+    @(posedge vif.preset_n);
     @(vif.cb);
     forever begin
       seq_item_port.get_next_item(tr);

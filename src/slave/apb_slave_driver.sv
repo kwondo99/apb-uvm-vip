@@ -23,17 +23,25 @@ class apb_slave_driver extends uvm_driver #(apb_item);
 
   task run_phase(uvm_phase phase);
     apb_item tr;
+		vif.cb.pready <= 0;
+		vif.cb.prdata <= 0;
+		vif.cb.pslverr <= 0;
+		@(posedge vif.preset_n);
+		@(vif.cb);
     forever begin
 			vif.cb.pready <= 1'b0;
       seq_item_port.get_next_item(tr);
       // drive signal
-      while (!vif.cb.psel) begin
-        @(vif.cb);
-      end
+      do begin 
+				@(vif.cb);
+			end while (!vif.cb.psel);
+//      while (!vif.cb.psel) begin
+//        @(vif.cb);
+//      end
       @(vif.cb);
-      while (!vif.cb.penable) begin
-        @(vif.cb);
-      end
+      //while (!vif.cb.penable) begin
+      //  @(vif.cb);
+      //end
 			`uvm_info("S_DRV", $sformatf("delay = %d", tr.PREADY_DELAY), UVM_MEDIUM)
       for (int i = 0; i < tr.PREADY_DELAY; i++) begin
         @(vif.cb);

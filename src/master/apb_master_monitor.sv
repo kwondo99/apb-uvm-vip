@@ -3,8 +3,11 @@ class apb_master_monitor extends uvm_monitor;
 
   virtual apb_master_if vif;
 
+	uvm_analysis_port#(apb_item) ap;
+
   function new(name = "apb_master_monitor", uvm_component parent);
     super.new(name, parent);
+		ap = new("ap", this);
   endfunction
 
   function void build_phase(uvm_phase phase);
@@ -36,6 +39,7 @@ class apb_master_monitor extends uvm_monitor;
                 tr.PREADY,
                 tr.PRDATA
                 ), UVM_MEDIUM)
+			ap.write(tr);
     end
   endtask
 endclass

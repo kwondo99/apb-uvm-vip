@@ -28,7 +28,7 @@ class apb_slave_monitor extends uvm_monitor;
       tr.PSTRB   = vif.pstrb;
       tr.PREADY  = vif.pready;
       tr.PRDATA  = vif.prdata;
-      `uvm_info("M_MON", $sformatf(
+      `uvm_info("S_MON", $sformatf(
                 "paddr = 8'h%h, psel = %b, penable = %b, pwrite = %b, pwdata = 8'h%h, pstrb = %b, pready = %b, prdata = 8'h%h",
                 tr.PADDR,
                 tr.PSEL,
@@ -38,7 +38,7 @@ class apb_slave_monitor extends uvm_monitor;
                 tr.PSTRB,
                 tr.PREADY,
                 tr.PRDATA
-                ), UVM_MEDIUM)
+                ), UVM_HIGH)
 			ap.write(tr);
     end
   endtask

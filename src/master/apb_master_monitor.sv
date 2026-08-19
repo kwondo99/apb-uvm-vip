@@ -38,7 +38,7 @@ class apb_master_monitor extends uvm_monitor;
                 tr.PSTRB,
                 tr.PREADY,
                 tr.PRDATA
-                ), UVM_MEDIUM)
+                ), UVM_HIGH)
 			ap.write(tr);
     end
   endtask

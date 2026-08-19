@@ -51,6 +51,7 @@ class apb_master_driver extends uvm_driver #(apb_item);
       @(vif.cb);
       vif.cb.penable <= 1'b1;
       repeat (tr.PREADY_DELAY) @(vif.cb);
+      vif.cb.penable <= 1'b0;
     end
   endtask
 

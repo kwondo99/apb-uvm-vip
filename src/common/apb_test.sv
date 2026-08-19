@@ -16,7 +16,7 @@ class apb_base_test extends uvm_test;
 		uvm_top.print_topology();
 	endfunction 
 
-	task run_phase(uvm_phase phase);
+	virtual task run_phase(uvm_phase phase);
 		apb_master_sequence m_seq;
 		apb_slave_sequence s_seq;
 		phase.raise_objection(this);
@@ -27,6 +27,24 @@ class apb_base_test extends uvm_test;
 		s_seq.start(env.slave_agt.sqr);	
 		join_any
 		phase.drop_objection(this);
+	endtask	
+
+endclass
+
+class apb_virtual_test extends apb_base_test;
+	`uvm_component_utils(apb_virtual_test)
+	
+	apb_virtual_sequence v_seq;
+
+	function new(string name, uvm_component parent);
+		super.new(name, parent);
+	endfunction
+
+	virtual task run_phase(uvm_phase phase);
+		phase.raise_objection(this);
+		v_seq = apb_virtual_sequence::type_id::create("v_seq");
+		v_seq.start(env.v_sqr);
+		phase.drop_objection(this);	
 	endtask	
 
 endclass

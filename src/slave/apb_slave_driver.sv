@@ -3,7 +3,7 @@ class apb_slave_driver extends uvm_driver #(apb_item);
 
   virtual apb_slave_if vif;
 
-  function new(name = "apb_slave_driver", uvm_component parent);
+  function new(string name = "apb_slave_driver", uvm_component parent);
     super.new(name, parent);
   endfunction
 

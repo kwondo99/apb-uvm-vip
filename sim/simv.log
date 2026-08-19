@@ -1,0 +1,442 @@
+Command: /home/pedu02/dongo_work/project/20260731_apb_vip/sim/./simv -l simv.log +UVM_TESTNAME=apb_virtual_test +UVM_VERBOSITY=UVM_MEDIUM
+Chronologic VCS simulator copyright 1991-2024
+Contains Synopsys proprietary information.
+Compiler version W-2024.09-SP2_Full64; Runtime version W-2024.09-SP2_Full64;  Aug 19 22:05 2026
+UVM_INFO /tools/synopsys/vcs/W-2024.09-SP2/etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+*Verdi* Loading libsscore_vcs202409.so
+FSDB Dumper for VCS, Release Verdi_X-2025.06-1, Linux x86_64/64bit, 07/19/2025
+(C) 1996 - 2025 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'apb_test.fsdb'
+*Verdi* : Begin traversing the scope (apb_tb_top), layer (0).
+*Verdi* : End of traversing.
+UVM_INFO @ 0: reporter [RNTST] Running test apb_virtual_test...
+UVM_INFO /tools/synopsys/vcs/W-2024.09-SP2/etc/uvm-1.2/base/uvm_root.svh(589) @ 0: reporter [UVMTOP] UVM testbench topology:
+---------------------------------------------------------------
+Name                       Type                     Size  Value
+---------------------------------------------------------------
+uvm_test_top               apb_virtual_test         -     @347 
+  env                      apb_env                  -     @360 
+    master_agt             apb_master_agent         -     @369 
+      drv                  apb_master_driver        -     @554 
+        rsp_port           uvm_analysis_port        -     @573 
+        seq_item_port      uvm_seq_item_pull_port   -     @563 
+      mon                  apb_master_monitor       -     @583 
+        ap                 uvm_analysis_port        -     @592 
+      sqr                  uvm_sequencer            -     @602 
+        rsp_export         uvm_analysis_export      -     @611 
+        seq_item_export    uvm_seq_item_pull_imp    -     @729 
+        arbitration_queue  array                    0     -    
+        lock_queue         array                    0     -    
+        num_last_reqs      integral                 32    'd1  
+        num_last_rsps      integral                 32    'd1  
+    scb                    apb_scoreboard           -     @387 
+      master_imp           uvm_analysis_imp_master  -     @396 
+      slave_imp            uvm_analysis_imp_slave   -     @406 
+    slave_agt              apb_slave_agent          -     @378 
+      drv                  apb_slave_driver         -     @747 
+        rsp_port           uvm_analysis_port        -     @766 
+        seq_item_port      uvm_seq_item_pull_port   -     @756 
+      mon                  apb_slave_monitor        -     @776 
+        ap                 uvm_analysis_port        -     @785 
+      sqr                  uvm_sequencer            -     @795 
+        rsp_export         uvm_analysis_export      -     @804 
+        seq_item_export    uvm_seq_item_pull_imp    -     @922 
+        arbitration_queue  array                    0     -    
+        lock_queue         array                    0     -    
+        num_last_reqs      integral                 32    'd1  
+        num_last_rsps      integral                 32    'd1  
+    v_sqr                  apb_virtual_sequencer    -     @416 
+      m_sqr                uvm_sequencer            -     @944 
+        rsp_export         uvm_analysis_export      -     @953 
+        seq_item_export    uvm_seq_item_pull_imp    -     @1071
+        arbitration_queue  array                    0     -    
+        lock_queue         array                    0     -    
+        num_last_reqs      integral                 32    'd1  
+        num_last_rsps      integral                 32    'd1  
+      rsp_export           uvm_analysis_export      -     @425 
+      s_sqr                uvm_sequencer            -     @1081
+        rsp_export         uvm_analysis_export      -     @1090
+        seq_item_export    uvm_seq_item_pull_imp    -     @1208
+        arbitration_queue  array                    0     -    
+        lock_queue         array                    0     -    
+        num_last_reqs      integral                 32    'd1  
+        num_last_rsps      integral                 32    'd1  
+      seq_item_export      uvm_seq_item_pull_imp    -     @543 
+      arbitration_queue    array                    0     -    
+      lock_queue           array                    0     -    
+      num_last_reqs        integral                 32    'd1  
+      num_last_rsps        integral                 32    'd1  
+---------------------------------------------------------------
+
+UVM_INFO ../src/common/apb_test.sv(46) @ 0: uvm_test_top [TEST] virtual_sequence start
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 25000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 95bc2384, psel = 0, pwrite = 1, pwdata= 58b33840
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 75000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 75000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = dbf81821, psel = 1, pwrite = 1, pwdata= 8bb9ef9d
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 95000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          0
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 105000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 105000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 105000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = d0bb7fbc, psel = 0, pwrite = 0, pwdata= c85f8425
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 135000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 135000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 06c908a6, psel = 0, pwrite = 1, pwdata= ec1fed66
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 165000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 165000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 492785ba, psel = 0, pwrite = 0, pwdata= 44947866
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 215000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 215000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 68aedf52, psel = 0, pwrite = 1, pwdata= 63044e16
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 265000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 265000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 09b5fd8d, psel = 1, pwrite = 0, pwdata= 05d6187a
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 285000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          2
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 315000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 315000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 315000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 7f3d72b8, psel = 0, pwrite = 1, pwdata= 5fe7972f
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 355000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 355000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = c78c16a3, psel = 0, pwrite = 0, pwdata= c4d99c6c
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 375000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 375000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = c03ccd36, psel = 0, pwrite = 1, pwdata= 8abd73e4
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 415000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 415000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 002ede43, psel = 1, pwrite = 0, pwdata= a3f9d05d
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 435000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          0
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 445000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 445000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 445000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = e076effe, psel = 1, pwrite = 1, pwdata= 639aa472
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 465000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          4
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 515000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 515000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 515000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 2b43b1a7, psel = 1, pwrite = 1, pwdata= 748de30f
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 535000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          1
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 555000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 555000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 555000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = abd4124b, psel = 1, pwrite = 1, pwdata= 4653ce61
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 575000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          1
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 595000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 595000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 595000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = a5ca5022, psel = 0, pwrite = 1, pwdata= c3e8512f
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 625000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 625000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = ad21fd5b, psel = 1, pwrite = 0, pwdata= 5cb91b19
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 645000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          1
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 665000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 665000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 665000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 2d9ceb80, psel = 0, pwrite = 1, pwdata= 6219db48
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 685000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 685000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 61bcadb2, psel = 1, pwrite = 1, pwdata= 92553cd2
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 705000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          4
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 755000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 755000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 755000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 2b942c83, psel = 1, pwrite = 1, pwdata= 4ccc32e7
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 775000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          1
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 795000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 795000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 795000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = ed5c06e1, psel = 0, pwrite = 1, pwdata= 30057ba6
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 845000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 845000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 9da6f8c0, psel = 1, pwrite = 1, pwdata= b779cf46
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 865000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          1
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 885000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 885000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 885000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 7c5c5fe0, psel = 0, pwrite = 0, pwdata= 20fa13e8
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 915000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 915000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = a3ae16c0, psel = 1, pwrite = 0, pwdata= 5233c3b4
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 935000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          4
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 985000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 985000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 985000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 291b22cc, psel = 1, pwrite = 1, pwdata= 14c426c2
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 1005000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          0
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 1015000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 1015000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 1015000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 305783b2, psel = 0, pwrite = 0, pwdata= 52a5d645
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 1045000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 1045000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = cb2a3acb, psel = 1, pwrite = 0, pwdata= fb1527de
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 1065000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          1
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 1085000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 1085000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 1085000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 17a3a0d0, psel = 0, pwrite = 1, pwdata= fc140369
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 1125000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 1125000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = de2a91cc, psel = 1, pwrite = 1, pwdata= 709239a5
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 1145000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          3
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 1185000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 1185000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 1185000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 30211474, psel = 1, pwrite = 0, pwdata= cd7e701e
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 1205000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          3
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 1245000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 1245000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 1245000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = a59ee951, psel = 0, pwrite = 1, pwdata= dc761a9e
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 1265000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 1265000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 72b957bb, psel = 0, pwrite = 0, pwdata= 670c4b9d
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 1315000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 1315000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = d18442db, psel = 1, pwrite = 1, pwdata= 44ab2a46
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 1335000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          3
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 1375000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 1375000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 1375000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = dcbc98c1, psel = 1, pwrite = 0, pwdata= ae9ae9e9
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 1395000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          4
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 1445000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 1445000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 1445000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = cd273b8a, psel = 0, pwrite = 0, pwdata= 49abea07
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 1475000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 1475000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 2ae62fd9, psel = 1, pwrite = 1, pwdata= 0e616231
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 1495000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          3
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 1535000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 1535000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 1535000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = c91d4e4a, psel = 1, pwrite = 0, pwdata= 347673be
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 1555000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          2
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 1585000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 1585000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 1585000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = cfd0133f, psel = 1, pwrite = 0, pwdata= 00e32bae
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 1605000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          4
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 1655000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 1655000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 1655000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 2348b82e, psel = 1, pwrite = 1, pwdata= 9dfa4b6e
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 1675000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          3
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 1715000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 1715000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 1715000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = b16f0f98, psel = 0, pwrite = 0, pwdata= 09d4e830
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 1765000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 1765000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = b7b4fbcb, psel = 0, pwrite = 1, pwdata= 5104f833
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 1815000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 1815000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = a93f425d, psel = 1, pwrite = 0, pwdata= 99266006
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 1835000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          4
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 1885000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 1885000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 1885000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = cc74f997, psel = 0, pwrite = 1, pwdata= 0226a756
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 1935000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 1935000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = bc3236d7, psel = 1, pwrite = 1, pwdata= 799c8e6c
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 1955000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          3
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 1995000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 1995000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 1995000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 3f9a6900, psel = 0, pwrite = 1, pwdata= 88056277
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 2045000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 2045000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = f1c9e128, psel = 0, pwrite = 0, pwdata= c17210c3
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 2075000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 2075000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = edd45656, psel = 0, pwrite = 1, pwdata= 8589a0d6
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 2105000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 2105000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 8600648d, psel = 0, pwrite = 1, pwdata= 3693b55a
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 2145000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 2145000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 48cddbc0, psel = 1, pwrite = 0, pwdata= c0fe8e4a
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 2165000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          1
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 2185000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 2185000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 2185000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = cdd0ba7c, psel = 1, pwrite = 1, pwdata= 7952a56e
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 2205000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          4
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 2255000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 2255000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 2255000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 3161567c, psel = 0, pwrite = 0, pwdata= e11a028d
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 2305000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 2305000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = f19c26b2, psel = 0, pwrite = 1, pwdata= a9a73802
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 2335000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 2335000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 86909b14, psel = 0, pwrite = 0, pwdata= 664212d5
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 2355000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 2355000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = a23e268d, psel = 1, pwrite = 1, pwdata= 94652153
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 2375000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          3
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 2415000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 2415000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 2415000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = b0d34630, psel = 0, pwrite = 1, pwdata= 8c0534d3
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 2435000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 2435000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = f8e64972, psel = 1, pwrite = 0, pwdata= e42629ae
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 2455000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          0
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 2465000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 2465000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 2465000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = b068b7e3, psel = 1, pwrite = 0, pwdata= ae1eb107
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 2485000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          4
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 2535000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 2535000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 2535000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 4226714d, psel = 1, pwrite = 1, pwdata= 8e5b1710
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 2555000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          4
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 2605000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 2605000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 2605000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 05bbbdcb, psel = 0, pwrite = 1, pwdata= 07d4bd97
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 2655000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 2655000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = fb50988e, psel = 1, pwrite = 1, pwdata= 1a03aba8
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 2675000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          1
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 2695000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 2695000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 2695000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 7abef831, psel = 1, pwrite = 1, pwdata= ab3455a2
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 2715000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          3
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 2755000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 2755000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 2755000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = a3b2b3cb, psel = 1, pwrite = 0, pwdata= 3b7b0a25
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 2775000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          2
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 2805000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 2805000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 2805000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = a741a215, psel = 1, pwrite = 0, pwdata= 86928b64
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 2825000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          3
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 2865000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 2865000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 2865000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 85f83ea7, psel = 1, pwrite = 0, pwdata= f2b143a8
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 2885000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          3
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 2925000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 2925000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 2925000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = cf4e6ec6, psel = 1, pwrite = 1, pwdata= 5e7d547c
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 2945000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          0
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 2955000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 2955000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 2955000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 3abeafa3, psel = 0, pwrite = 0, pwdata= 084faec2
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 3005000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 3005000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 1fd0129e, psel = 1, pwrite = 1, pwdata= c485d9bb
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 3025000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          3
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 3065000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 3065000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 3065000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 0df48f76, psel = 1, pwrite = 1, pwdata= 90147607
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 3085000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          2
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 3115000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 3115000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 3115000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 9b801bbf, psel = 0, pwrite = 0, pwdata= 773123c9
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 3135000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 3135000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = aa664b2f, psel = 1, pwrite = 1, pwdata= 475f6d4e
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 3155000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          2
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 3185000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 3185000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 3185000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = e2715c2c, psel = 0, pwrite = 0, pwdata= cf143b86
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 3205000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 3205000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = b848033b, psel = 0, pwrite = 0, pwdata= 2b0cb06c
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 3245000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 3245000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = cba75862, psel = 1, pwrite = 1, pwdata= 0273e5f9
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 3265000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          3
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 3305000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 3305000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 3305000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 2e78ece2, psel = 0, pwrite = 1, pwdata= 513c052a
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 3325000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 3325000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 9f1621f8, psel = 0, pwrite = 0, pwdata= e7f439e6
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 3365000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 3365000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 70d65664, psel = 1, pwrite = 1, pwdata= 372df819
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 3385000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          1
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 3405000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 3405000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 3405000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 69715b3b, psel = 0, pwrite = 0, pwdata= 5c0dfa5b
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 3455000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 3455000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = fa7e507f, psel = 0, pwrite = 0, pwdata= d66ce66f
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 3475000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 3475000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 6b835718, psel = 0, pwrite = 0, pwdata= 8cdba255
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 3505000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 3505000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = c671e37e, psel = 0, pwrite = 0, pwdata= afd28a12
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 3535000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 3535000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = a68579c9, psel = 0, pwrite = 0, pwdata= 2c32835f
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 3585000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 3585000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 3f06d577, psel = 1, pwrite = 0, pwdata= cbab2c96
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 3605000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          1
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 3625000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 3625000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 3625000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 2d2fc917, psel = 1, pwrite = 1, pwdata= e047492d
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 3645000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          4
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 3695000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 3695000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 3695000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 3785299b, psel = 1, pwrite = 1, pwdata= 7cc0558a
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 3715000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          1
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 3735000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 3735000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 3735000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = e10333c6, psel = 1, pwrite = 0, pwdata= 6cb6ed4f
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 3755000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          4
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 3805000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 3805000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 3805000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 36e4d443, psel = 0, pwrite = 0, pwdata= efca005a
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 3835000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 3835000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 67e50b78, psel = 1, pwrite = 0, pwdata= cfc38dde
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 3855000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          4
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 3905000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 3905000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 3905000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = e417388a, psel = 0, pwrite = 1, pwdata= 22302927
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 3925000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 3925000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = f0ea1c63, psel = 1, pwrite = 1, pwdata= f8adcd8b
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 3945000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          4
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 3995000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 3995000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 3995000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = aa24ae4f, psel = 1, pwrite = 1, pwdata= 2015f12b
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 4015000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          0
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 4025000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 4025000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 4025000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 5252e735, psel = 1, pwrite = 0, pwdata= 370d9995
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 4045000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          1
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 4065000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 4065000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 4065000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 388de073, psel = 1, pwrite = 0, pwdata= 32120e94
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 4085000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          4
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 4135000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 4135000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 4135000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 92a44d64, psel = 1, pwrite = 1, pwdata= 1f2d6caa
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 4155000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          3
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 4195000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 4195000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 4195000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 14f7ffad, psel = 0, pwrite = 1, pwdata= f0db0cb6
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 4225000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 4225000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = d3d35347, psel = 1, pwrite = 1, pwdata= f3d129ba
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 4245000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          3
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 4285000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 4285000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 4285000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 998c8193, psel = 1, pwrite = 0, pwdata= 53ea288a
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 4305000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          0
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 4315000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 4315000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 4315000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = e5f62f5a, psel = 1, pwrite = 0, pwdata= 13b971c9
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 4335000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          0
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 4345000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 4345000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 4345000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = df45bdd8, psel = 1, pwrite = 0, pwdata= be027900
+UVM_INFO ../src/slave/apb_slave_driver.sv(45) @ 4365000: uvm_test_top.env.slave_agt.drv [S_DRV] delay =          2
+UVM_INFO ../src/slave/apb_slave_sequence.sv(13) @ 4395000: uvm_test_top.env.slave_agt.sqr@@s_seq [S_SEQ] make s_seq
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 4395000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 4395000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = e74fd6cc, psel = 0, pwrite = 0, pwdata= 0d8fb517
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 4435000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 4435000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = d9e6d689, psel = 0, pwrite = 0, pwdata= df8d3e0f
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 4485000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO ../src/master/apb_master_driver.sv(70) @ 4485000: uvm_test_top.env.master_agt.drv [M_DRV] paddr = 26596836, psel = 0, pwrite = 0, pwdata= d3fe9676
+UVM_INFO ../src/master/apb_master_sequence.sv(13) @ 4515000: uvm_test_top.env.master_agt.sqr@@m_seq [M_SEQ] make seq
+UVM_INFO /tools/synopsys/vcs/W-2024.09-SP2/etc/uvm-1.2/base/uvm_objection.svh(1276) @ 4515000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO ../src/common/apb_scoreboard.sv(153) @ 4515000: uvm_test_top.env.scb [SCB] *********** End test ***********
+UVM_INFO ../src/common/apb_scoreboard.sv(154) @ 4515000: uvm_test_top.env.scb [SCB] ** write : 30, read : 24, fault_injection = 45, pass : 99, fail : 0 **
+UVM_INFO ../src/common/apb_scoreboard.sv(155) @ 4515000: uvm_test_top.env.scb [SCB] ********************************
+UVM_INFO /tools/synopsys/vcs/W-2024.09-SP2/etc/uvm-1.2/base/uvm_report_catcher.svh(705) @ 4515000: reporter [UVM/REPORT/CATCHER] 
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+UVM_INFO /tools/synopsys/vcs/W-2024.09-SP2/etc/uvm-1.2/base/uvm_report_server.svh(904) @ 4515000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  317
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[M_DRV]   100
+[M_SEQ]   100
+[RNTST]     1
+[SCB]     3
+[S_DRV]    54
+[S_SEQ]    54
+[TEST]     1
+[TEST_DONE]     1
+[UVM/RELNOTES]     1
+[UVM/REPORT/CATCHER]     1
+[UVMTOP]     1
+
+$finish called from file "/tools/synopsys/vcs/W-2024.09-SP2/etc/uvm-1.2/base/uvm_root.svh", line 527.
+$finish at simulation time              4515000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 4515000 ps
+CPU Time:      0.220 seconds;       Data structure size:   0.7Mb
+Wed Aug 19 22:05:33 2026

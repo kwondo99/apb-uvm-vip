@@ -5,7 +5,7 @@ class apb_master_monitor extends uvm_monitor;
 
 	uvm_analysis_port#(apb_item) ap;
 
-  function new(name = "apb_master_monitor", uvm_component parent);
+  function new(string name = "apb_master_monitor", uvm_component parent);
     super.new(name, parent);
 		ap = new("ap", this);
   endfunction

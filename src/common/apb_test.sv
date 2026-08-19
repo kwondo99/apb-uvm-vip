@@ -43,6 +43,7 @@ class apb_virtual_test extends apb_base_test;
 	virtual task run_phase(uvm_phase phase);
 		phase.raise_objection(this);
 		v_seq = apb_virtual_sequence::type_id::create("v_seq");
+		`uvm_info("TEST", $sformatf("virtual_sequence start"), UVM_LOW)
 		v_seq.start(env.v_sqr);
 		phase.drop_objection(this);	
 	endtask	

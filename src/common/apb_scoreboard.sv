@@ -77,7 +77,7 @@ class apb_scoreboard extends uvm_scoreboard;
           `uvm_error("M_SCB", $sformatf("psel is low while transaction"))
           m_state = IDLE;
         end
-        if (tr.PENABLE) begin
+        else if (tr.PENABLE) begin
           `uvm_info("M_SCB", $sformatf("PASS setup state"), UVM_HIGH)
           m_state = ACCESS;
         end else begin
@@ -124,6 +124,7 @@ class apb_scoreboard extends uvm_scoreboard;
 				else if (!tr.PENABLE) begin
 					fault_injection++;
 					m_pass++;	
+					m_state = IDLE;
 				end
       end
       default: begin

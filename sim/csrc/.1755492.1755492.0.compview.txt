@@ -1,0 +1,9 @@
+{"vcs1":{"timestamp_begin":1787144725.523866014, "rt":6.49, "ut":6.64, "st":0.23}}
+{"vcselab":{"timestamp_begin":1787144732.060982114, "rt":0.17, "ut":0.12, "st":0.03}}
+{"link":{"timestamp_begin":1787144732.262781186, "rt":0.54, "ut":0.42, "st":0.13}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1787144725.127946023}
+{"VCS_COMP_START_TIME": 1787144725.127946023}
+{"VCS_COMP_END_TIME": 1787144732.878540731}
+{"VCS_USER_OPTIONS": "-full64 -sverilog -debug_access+all -kdb -lca -ntb_opts uvm-1.2 -timescale=1ns/1ps +incdir+../src/common +incdir+../src/master +incdir+../src/slave ../src/master/apb_master_if.sv ../src/slave/apb_slave_if.sv ../src/common/dummy_dut.sv ../src/common/apb_pkg.sv ../src/common/apb_tb_top.sv -l compile.log -o simv"}
+{"vcs1": {"peak_mem": 481840}}
+{"vcselab": {"peak_mem": 174708}}

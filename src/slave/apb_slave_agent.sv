@@ -5,7 +5,7 @@ class apb_slave_agent extends uvm_agent;
   apb_slave_monitor mon;
   uvm_sequencer #(apb_item) sqr;
 
-  function new(name = "apb_slave_agent", uvm_component parent);
+  function new(string name = "apb_slave_agent", uvm_component parent);
     super.new(name, parent);
   endfunction
 

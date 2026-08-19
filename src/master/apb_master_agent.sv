@@ -5,7 +5,7 @@ class apb_master_agent extends uvm_agent;
 	apb_master_monitor mon;
 	uvm_sequencer #(apb_item) sqr;
 	
-	function new(name = "apb_master_agnet", uvm_component parent);
+	function new(string name = "apb_master_agnet", uvm_component parent);
 		super.new(name, parent);
 	endfunction
 

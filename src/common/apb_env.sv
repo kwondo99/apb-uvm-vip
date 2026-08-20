@@ -5,6 +5,7 @@ class apb_env extends uvm_env;
 	apb_slave_agent slave_agt;
 	apb_virtual_sequencer v_sqr;
 	apb_scoreboard scb;
+	apb_coverage cov;
 
 	function new(string name, uvm_component parent);
 		super.new(name, parent);
@@ -15,6 +16,7 @@ class apb_env extends uvm_env;
 		master_agt = apb_master_agent::type_id::create("master_agt", this);
 		slave_agt = apb_slave_agent::type_id::create("slave_agt", this);
 		scb = apb_scoreboard::type_id::create("scb", this);
+		cov = apb_coverage::type_id::create("cov", this);
 		v_sqr = apb_virtual_sequencer::type_id::create("v_sqr", this);
 	endfunction
 
@@ -24,6 +26,7 @@ class apb_env extends uvm_env;
 		slave_agt.mon.ap.connect(scb.slave_imp);
 		v_sqr.m_sqr = master_agt.sqr;
 		v_sqr.s_sqr = slave_agt.sqr;
+		master_agt.mon.ap.connect(cov.analysis_export);
 	endfunction 
 	
 endclass

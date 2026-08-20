@@ -7,7 +7,7 @@ class apb_master_sequence extends uvm_sequence #(apb_item);
 
   virtual task body();
     apb_item tr;
-    repeat (100) begin
+    repeat (1000) begin
       tr = apb_item::type_id::create("tr");
       `uvm_do_with(tr, {PREADY_DELAY > 0;})
       `uvm_info("M_SEQ", "make seq", UVM_MEDIUM)

@@ -1,0 +1,11 @@
+simv*
+csrc
+*.log
+*.key
+*.h
+*.vdb
+*.conf
+*.rc
+*.fsdb
+verdiLog
+
